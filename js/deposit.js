@@ -19,29 +19,20 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
   const newDepositTotal = previousDepositTotal + newDepositAmount;
   // console.log(newDepositTotal, previousDepositTotal, newDepositAmount);
   // set deposit total value
-  function setDepostiText(){
+  
     setTextElementValueById("deposit-total", newDepositTotal);
-  };
-  setDepostiText();
+  
   
 
   // get previous balance by using the function
   const previousBalanceTotal = getTextElementValueById("balance-total");
   console.log("previousBalanceTotal")
   const newBalanceTotal = previousBalanceTotal + newDepositAmount;
-  function setMainBalance(){
+  
     setTextElementValueById("balance-total", newBalanceTotal);
-  };
-  setMainBalance;
+  
   }else{
     alert("Please Enter Valid Number")
   }
   
 });
-
-document.getElementById('deposit-field').addEventListener('keypress', function(e){
-  if(e.key === 'Enter'){
-    setDepostiText();
-    setMainBalance();
-  }
-})
